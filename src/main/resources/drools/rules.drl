@@ -1,0 +1,8 @@
+import  org.example.domain.Order;
+
+rule "Example Rule"
+	when
+	    $order: Order(total > 100)
+	then
+	    $order.setDiscount(0.1);
+end;
